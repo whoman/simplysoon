@@ -5,3 +5,5 @@ If you are looking for a very simple template for the coming soon page, simplyso
 Customizing and setting up the template is very very simple and very fast. 
 
 I’ve designed it in a formal, functional and beautiful way.
+
+with this link you can see demo > https://ryn.wlx.name/html/simplysoon/
