@@ -1,0 +1,515 @@
+/*
+Template Name: SimplySoon
+Theme URL: http://ryn.wlx.name/html/simplysoon
+Description: Landing Page
+Author: Rayan Theme
+Author URL: https://themeforest.net/user/ryntheme
+Version: 1.0
+Tags: html theme, Coming Soon Landing Page, Coming Soon Landing Page template, html landing page, one page, responsive landing page
+*/
+
+/* ___________________________________________
+
+                   CONTENT
+   ___________________________________________ */
+
+/*   01. General Styles                        */
+/*   02. Typography                            */
+/*   03. Bootstrap Fix                         */
+/*   04. Buttons and Links                     */
+/*   05. Countdown                             */
+/*   06. Modal                                 */
+/*   07. Newsletter                            */
+/*   08. About Section                         */
+/*   09. Responsive                            */
+
+
+/* _____________________________________
+
+   01. General Styles
+   _____________________________________ */
+
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+    color: #85878d;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    line-height: 1.65;
+}
+
+.content-holder::after, .content-holder::before {
+    content: '';
+    position: absolute;
+    height: 280px;
+    z-index: 1;
+    width: 270px;
+}
+
+.content-holder::after {
+    background: #e4eaf3;
+    content: '';
+    position: absolute;
+    left: -110px;
+    top: 100px;
+    height: 400px;
+    width: 300px;
+    z-index: 0;
+    border-radius: 0 50px 0 0;
+    transform: rotate(25deg);
+    transform-origin: left top;
+}
+
+.content-holder::before {
+    content: '';
+    position: absolute;
+    right: -110px;
+    top: 300px;
+    height: 400px;
+    width: 400px;
+    z-index: 0;
+    border-radius: 0 0 0 50px;
+    transform: rotate(38deg);
+    transform-origin: right bottom;
+    background: #9bcc43;
+    background: -moz-linear-gradient(-35deg, #9bcc43 0, #35ba6b 100%);
+    background: -webkit-linear-gradient(-35deg, #9bcc43 0, #35ba6b 100%);
+    background: linear-gradient(-35deg, #9bcc43 0, #35ba6b 100%);
+}
+
+.content {
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0 10px 35px rgba(28, 76, 156, .15);
+    padding: 45px;
+    position: relative;
+    z-index: 2;
+    font-size: 16px;
+}
+
+/* _____________________________________
+
+   02. Typography
+   _____________________________________ */
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    line-height: 1.15;
+    color: #474b53;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 3.052em;
+}
+
+h2 {
+    font-size: 2.441em;
+}
+
+h3 {
+    font-size: 1.953em;
+}
+
+h4 {
+    font-size: 1.563em;
+}
+
+h5 {
+    font-size: 1.25em;
+}
+
+small, .text_small {
+    font-size: 0.8em;
+}
+
+.fw-300 {
+    font-weight: 300;
+}
+
+.fw-400 {
+    font-weight: 400;
+}
+
+.fs-2 {
+    font-size: 1.9em;
+}
+
+.text-white {
+    color: #ffffff;
+}
+
+/* _____________________________________
+
+   03. Bootstrap Fix
+   _____________________________________ */
+
+.form-control {
+    height: 50px;
+    padding: 15px 0 13px 0;
+    margin: 0 auto;
+    font-family: "Montserrat", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background-color: transparent;
+    color: #333;
+    border-radius: 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    box-shadow: none;
+    appearance: none;
+    outline: 0;
+}
+
+.form-control:focus {
+    border-color: #85878d;
+    box-shadow: none;
+    outline: none;
+}
+.input-group-text {
+    border: 0;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+textarea.form-control {
+    overflow: hidden;
+    display: block;
+    resize: none;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group,
+.input-group {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    transition: width .5s ease-in-out;
+}
+
+.focus.form-group,
+.focus.input-group {
+    width: 100%;
+}
+
+input:focus::-webkit-contacts-auto-fill-button {
+    visibility: hidden;
+    display: none !important;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+}
+textarea:hover, input:hover,
+textarea:active, input:active,
+textarea:focus, input:focus,
+button:focus, button:active,
+button:hover, label:focus,
+.btn:active, .btn.active {
+    outline: 0px !important;
+    -webkit-appearance: none;
+    box-shadow: none !important;
+}
+
+/* _____________________________________
+
+   04. Buttons and Links
+   _____________________________________ */
+a {
+    color: #85878d;
+    text-decoration: none;
+}
+
+a:hover,
+a:active,
+a:focus {
+    color: #6ac847;
+    text-decoration: underline;
+    outline: none;
+}
+
+.btn{
+    padding: 10px 20px;
+}
+
+.btn:hover {
+    color: #ffffff;
+    text-decoration: none;
+    top: -1px;
+}
+
+.btn-orange {
+    background: #ffb931;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, .25), 0 5px 15px rgba(255, 185, 49, .35);
+}
+.btn-orange:hover {
+    color: #fff;
+    background: #ffb018;
+    box-shadow: 0 2px 5px rgba(255,255,255,.3),0 7px 30px rgba(255,176,24,.45);
+}
+.btn-blue {
+    background: #6f8ec4;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, .25), 0 5px 15px rgba(111, 142, 196, .35);
+}
+
+.btn-blue:hover{
+    color: #fff;
+    background: #5d80bd;
+    box-shadow: 0 2px 5px rgba(255,255,255,.3),0 7px 30px rgba(93,128,189,.45);
+}
+/* _____________________________________
+
+   05. Countdown
+   _____________________________________ */
+
+.countdown{
+    padding: 0 160px;
+}
+
+.countdown-item {
+    background: #6ac847;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, .25), 0 5px 15px rgba(106, 200, 71, .35);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: lowercase;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    min-width: 100px;
+    margin: 10px;
+}
+
+/* _____________________________________
+
+   06. Modal
+   _____________________________________ */
+
+.modal.fade .modal-dialog.modal-dialog-zoom {
+    -webkit-transform: translate(0, 0) scale(.5);
+    transform: translate(0, 0) scale(.5);
+}
+
+.modal.show .modal-dialog.modal-dialog-zoom {
+    -webkit-transform: translate(0, 0) scale(1);
+    transform: translate(0, 0) scale(1);
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+/* _____________________________________
+
+   07. Newsletter
+   _____________________________________ */
+
+.newsletter::before{
+    content: "";
+    height: 15px;
+    background-image: repeating-linear-gradient(135deg, #F29B91 0px, #F09290 30px, transparent 30px, transparent 50px, #83B3DB 50px, #84ADCB 80px, transparent 80px, transparent 100px);
+    background-image: -webkit-repeating-linear-gradient(135deg, #F29B91 0px, #F09290 30px, transparent 30px, transparent 50px, #83B3DB 50px, #84ADCB 80px, transparent 80px, transparent 100px);
+    background-image: -o-repeating-linear-gradient(135deg, #F29B91 0px, #F09290 30px, transparent 30px, transparent 50px, #83B3DB 50px, #84ADCB 80px, transparent 80px, transparent 100px);
+    background-image: -moz-repeating-linear-gradient(135deg, #F29B91 0px, #F09290 30px, transparent 30px, transparent 50px, #83B3DB 50px, #84ADCB 80px, transparent 80px, transparent 100px);
+}
+
+.newsletter-modal-title {
+    top: 25px;
+    position: relative;
+    margin: 20px 0 50px 0;
+    text-align: center;
+}
+
+.newsletter-modal-title span {
+    z-index: 2;
+}
+
+.newsletter-modal-title::before {
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    bottom: -30px;
+    left: 50%;
+    margin-left: -20px;
+    content: "";
+    border-bottom: 1px solid;
+    background: #474b53;
+}
+
+.newsletter {
+    margin: 30px 0;
+}
+
+/* ----------------------------------
+   Validation Messages
+   ---------------------------------- */
+
+.message-box {
+    text-align: center;
+}
+
+.message-box label,
+.message-box .faild {
+    margin-bottom: 0;
+    width: 100%;
+    background: #ff4747;
+    padding: 10px;
+    color: #ffffff;
+}
+
+.message-box .success {
+    background: #6ac847;
+    padding: 15px;
+    color: #fff;
+}
+
+/* _____________________________________
+
+   08. About Section
+   _____________________________________ */
+
+.about p {
+    padding: 0 80px;
+    text-align: justify;
+}
+
+.back {
+    position: absolute;
+    left: 0px;
+    background: #e4eaf3;
+    padding: 5px 20px;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+    bottom: 15px;
+}
+
+.about-left {
+    border-radius: 5px 0 0 5px;
+    bottom: 0;
+    left: 0;
+    text-align: right;
+    position: absolute;
+    top: 0;
+    width: 33.3333%;
+    overflow: hidden;
+    z-index: 3;
+}
+
+.about-left::after, .about-left::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+}
+
+.about-left::after {
+    background: #f5f8fc;
+    z-index: 1;
+    top: 0;
+    transform: skewX(6deg);
+    transform-origin: right bottom;
+    border-radius: 0 0 50px 0;
+}
+
+.about-left::before {
+    background: linear-gradient(-45deg, #55bf5e 0, #8cc948 100%);
+    z-index: 2;
+    top: 0;
+    transform: skewX(-8deg);
+    transform-origin: right top;
+    border-radius: 0 50px 15px 0;
+}
+
+.about-left-inner {
+    position: relative;
+    padding: 45px;
+    text-align: left;
+    z-index: 4;
+}
+
+.about-right {
+    margin-left: 33.3333%;
+}
+
+/* ----------------------------------
+   Social Networks
+   ---------------------------------- */
+
+.social-networks {
+    text-align: left;
+    padding-left: 80px;
+}
+
+/* ----------------------------------
+   Contact
+   ---------------------------------- */
+
+.about-left-contact {
+    padding-top: 20px;
+}
+
+.contact-list li {
+    padding-bottom: 10px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.contact-list li span {
+    padding-bottom: 10px;
+    color: #e4ffd9;
+    font-weight: normal;
+}
+
+.contact-list li:last-child {
+    padding-bottom: 0px;
+}
+
+/* _____________________________________
+
+   09. Responsive
+   _____________________________________ */
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+    .about-left {
+        position: relative;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .about-right {
+        margin-left: 0;
+    }
+
+    .about p,
+    .social-networks {
+        padding: 0;
+    }
+
+    .about-left::before {
+        background: linear-gradient(-45deg, #55bf5e 0, #8cc948 100%);
+        z-index: 2;
+        top: 0;
+        transform: none;
+        border-radius: 15px;
+    }
+    .countdown{
+        padding: 0;
+    }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .content {
+        box-shadow: none;
+    }
+}
